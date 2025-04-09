@@ -1,0 +1,77 @@
+.hero-section{
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #1b1b1b;
+    margin-top: 100px;
+}
+
+.presentation{
+    line-height: 1;
+    text-align: left ;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.presentation > h1 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-section > div{
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+.photo{
+    border-radius: 50%;
+    width: auto;
+    height: 450px;
+    aspect-ratio: 1/1;
+}
+
+.animated-title-container {
+    color: #ee0e0a;
+    line-height: 0px;
+    position: relative;
+  
+    font-size: 28px;
+    height: 300px; /* Adjust based on your h2 height */
+    overflow: hidden;
+}
+
+.animated-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: none;
+    visibility: hidden;
+}
+
+.animated-title.active {
+    visibility: visible;
+    animation: flip 2.5s forwards;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+    }
+    20% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+}
